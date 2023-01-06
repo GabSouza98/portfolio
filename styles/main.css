@@ -30,7 +30,7 @@
 
 .wrapper::-webkit-scrollbar {    
     z-index: 0;
-    width: 10px;       
+    width: 0px;       
 }
 
 header {
@@ -60,7 +60,7 @@ header {
     justify-content: center;
     gap: 30px;
     color: white;
-    text-shadow: 0 0 5px black;
+    text-shadow: 0 0 50px black;
 }
 
 .texts h1 {    

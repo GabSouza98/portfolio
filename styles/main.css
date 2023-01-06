@@ -10,6 +10,73 @@
     scroll-behavior: smooth;
 }
 
+#welcome {
+    margin: 0 !important;   
+}
+
+.welcome-container {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.welcome-container::-webkit-scrollbar {    
+    z-index: 0;
+    width: 0px;    
+    background-color: #e2e8f0;
+    left: 10px;
+}
+
+header {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    transform-style: inherit;
+    width: 100%; 
+}
+
+header h1 {
+    margin-top: -200px;
+    font-size: 4rem;
+}
+
+header p {
+    margin-top: -50px;
+    font-size: 1.5rem;
+}
+
+header, header:before {
+    background: 50% 50% / cover;  
+}
+
+header::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(./../assets/background/sky4.jfif); 
+    background-size: cover;
+    background-repeat: repeat-y;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+header * {
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+    color: #fff;
+}
+
 .sidebar {
     position: fixed;
     background: #11101d;

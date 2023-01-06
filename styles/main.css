@@ -14,6 +14,13 @@
     margin: 0 !important;   
 }
 
+#aboutme {
+    margin: 0 !important;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #e2e8f0;
+}
+
 .wrapper {
     height: 100vh;   
     overflow-y: auto;
@@ -23,7 +30,7 @@
 
 .wrapper::-webkit-scrollbar {    
     z-index: 0;
-    width: 0px;       
+    width: 10px;       
 }
 
 header {
@@ -34,13 +41,13 @@ header {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1; 
-    /* margin-bottom: 40rem;   */
 }
 
 .background {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    left: 0;
+    height: 100vh;
+    min-width: 100vw;
     object-fit: cover;
     z-index: -1;
     transform: translateZ(-1px) scale(2);
@@ -856,7 +863,15 @@ section {
 }
 
 .timeline-container ul li:hover {
-    box-shadow: 1px 1px 25px rgb(0, 197, 174, 0.5);
+    box-shadow: 1px 1px 15px rgb(0, 252, 223);  
+} 
+
+.timeline-container ul li:hover .circle {
+    box-shadow: 1px 1px 50px rgb(0, 252, 223);   
+}
+
+.timeline-container ul li:hover .circle::after {
+    box-shadow: 1px 1px 50px rgb(0, 252, 223); 
 }
 
 .timeline-container ul li:nth-child(odd) {
@@ -916,6 +931,7 @@ section {
     border-radius: 50%;
     position: absolute;
     top: 0;    
+    transition: all 0.5s ease;
 }
 
 .timeline-container ul li .circle::after {
@@ -928,6 +944,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
 }
 
 .timeline-container ul li:nth-child(odd) .circle {
@@ -948,7 +965,7 @@ section {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
 
 /* Track */
@@ -971,7 +988,7 @@ section {
         position: relative;
         min-height: 100vh;
         width: 100%;
-        overflow-y: visible;
+        /* overflow-y: visible; */
         overflow-x: hidden;
     }
 

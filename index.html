@@ -150,6 +150,7 @@
 
 
     <div class="home_content">
+
         <section id="section1">    
             <div class="spacer"></div>        
             <p class="section_title">Nice to meet you. I'm Gabriel</p>
@@ -655,11 +656,27 @@
         <section id="microservices">
             <div class="spacer"></div>
             <p class="section_title">Microservices</p>
-            <p class="section_text">
-                Currently I work at a bank, developing mainly backend solutions for Brazil's instant payment system, also
+
+            <div class="card-container">
+                <img class="right30" src="./assets/microservices/pix_logo2.png" /> 
+                <p class="section_text">
+                    Currently I work at a Bank, developing mainly backend solutions for Brazil's instant payment system, also
+                    kwown as Pix. Basically, transactions between different banks pass through the Central Bank, which regulates and defines
+                    the APIs that banks should use to make Pix transactions. 
+                </p>
+                <br>
+            </div>
+
+
+            <!-- <p class="section_text">
+                Currently I work at a Bank, developing mainly backend solutions for Brazil's instant payment system, also
                 kwown as Pix. Basically, transactions between different banks pass through the Central Bank, which regulates and defines
                 the APIs that banks should use to make Pix transactions. 
             </p>
+
+            <div class="image-container">
+                <img class="image30" src="./assets/microservices/pix_logo2.png" />                                
+            </div>  -->
 
             <p class="section_text">
                 First, the debtor participant sends a message to the Central Bank stating the desire to initiate a transaction. Then,
@@ -667,6 +684,10 @@
                 accepts the payment, he answer with another message to Central Bank, which then notifies both the participants about
                 the success of the transaction.
             </p>   
+
+            <div class="image-container">
+                <img class="image80" src="./assets/microservices/pix_fluxo2.jpg" />                                
+            </div> 
             
             <p class="section_text">
                 The project utilizes microservices architecture, dividing the components as Orchestrators (Integration microservices) and Atomic microservices.
@@ -674,6 +695,10 @@
                 listening/posting to MQ queues. Atomics handle the database connection, saving and retrieving data, among other more
                 specific tasks.
             </p>
+
+            <div class="image-container">
+                <img class="image80" src="./assets/microservices/microservices3.png" />                                
+            </div>
             
             <p class="section_text">
                 Every component is implemented following the Hexagonal (Ports and Adapters) pattern, which focus on segregating as much as 
@@ -681,6 +706,10 @@
                 between services, providing an easy way to connected to their software environment by means of ports and adapters. For instance, if 
                 it were necessary to change the DBMS, this could be done by making changes only to the adapter layer, without changing the other layers.
             </p>
+
+            <div class="image-container">
+                <img class="image80" src="./assets/microservices/hexagonal.png" />                                
+            </div> 
 
         </section>    
 
@@ -835,7 +864,42 @@
         <section id="scholarity">
             <div class="spacer"></div>
             <p class="section_title">Scholarity</p>
-            <p class="section_text">Bolsas de IC na UFRGS, empresa junior... aula de matematica particular</p>
+            <!-- <p class="section_text">Bolsas de IC na UFRGS, empresa junior... aula de matematica particular</p> -->
+
+            <div class="timeline-container">
+                <ul>
+                    <li>
+                        <h3 class="title">Frontend Developer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti repudiandae? Blanditiis repudiandae cumque magnam sequi inventore odit eveniet saepe libero fuga mollitia est, incidunt amet architecto dolores nemo in.</p>
+                        <a href="#">Read More</a>
+                        <span class="circle"></span>
+                        <span class="date">January, 2022</span>                    
+                    </li>
+                    <li>
+                        <h3 class="title">Backend Developer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti repudiandae? Blanditiis repudiandae cumque magnam sequi inventore odit eveniet saepe libero fuga mollitia est, incidunt amet architecto dolores nemo in.</p>
+                        <a href="#">Read More</a>
+                        <span class="circle"></span>
+                        <span class="date">January, 2022</span>                    
+                    </li>
+                    <li>
+                        <h3 class="title">Full Stack Developer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti repudiandae? Blanditiis repudiandae cumque magnam sequi inventore odit eveniet saepe libero fuga mollitia est, incidunt amet architecto dolores nemo in.</p>
+                        <a href="#">Read More</a>
+                        <span class="circle"></span>
+                        <span class="date">January, 2022</span>                    
+                    </li>
+                    <li>
+                        <h3 class="title">App Developer</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, corrupti repudiandae? Blanditiis repudiandae cumque magnam sequi inventore odit eveniet saepe libero fuga mollitia est, incidunt amet architecto dolores nemo in.</p>
+                        <a href="#">Read More</a>
+                        <span class="circle"></span>
+                        <span class="date">January, 2022</span>                    
+                    </li>
+                </ul>
+            </div>
+
+
         </section>
 
         <section id="contactme">

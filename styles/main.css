@@ -449,9 +449,13 @@ section {
 
 .right30 {
     width: 300px;
-    float: right;
-    padding: 0px 20px;
-    object-fit: contain;
+    float: right;    
+    object-fit: fill;  
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #1d1b31;
+    border-radius: 8px;
+
 }
 
 .right40 {
@@ -570,6 +574,7 @@ section {
     justify-content: center;
 }
 
+/* Form Style */
 .form-container {    
     background-color: #11101d;
     opacity: 0.9;
@@ -577,7 +582,7 @@ section {
     height: auto;   
     border-radius: 10px;
     padding: 15px;
-    border: 1px solid #00dfc4;
+    /* border: 1px solid #00dfc4; */
     /* -webkit-box-shadow: 0px 0px 5px 1px #00DFC4; 
     box-shadow: 0px 0px 5px 1px #00DFC4; */
 }
@@ -757,6 +762,129 @@ section {
     font-size: 1.0rem;
 }
 
+/* Timeline Start */
+#scholarity {
+    display: grid;
+    place-items: center;
+}
+
+.timeline-container {    
+    width: 80%;
+    height: auto;
+    margin-top: 60px;
+    position: relative;
+}
+
+.timeline-container::after {
+    position: absolute;
+    content: ' ';
+    width: 2px;
+    height: 100%;
+    /* background-image: linear-gradient(to bottom, rgb(0, 223, 196), rgb(17, 16, 29)); */
+    background-color: #1d1b31cb;
+}
+
+.timeline-container ul {
+    list-style: none;    
+}
+
+.timeline-container ul li {
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    margin-bottom: 30px;  
+    z-index: 99; 
+    position: relative;
+}
+
+.timeline-container ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    text-align: right;
+}
+
+.timeline-container ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.timeline-container ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-container ul li .title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #1d1b31;    
+}
+
+.timeline-container ul li p {
+    font-size: 1rem;
+    color: #444;
+    margin: 7px 0;
+    line-height: 1.3rem;
+}
+
+.timeline-container ul li a {
+    font-size: 1rem;
+    color: #1d1b31; 
+    text-decoration: none;
+}
+
+.timeline-container ul li .date {
+    position: absolute;
+    top: -40px;
+    width: 135px;
+    height: 35px;   
+    border-radius: 20px;
+    color: #fff;
+    background-image: linear-gradient(to right, rgb(14, 8, 22), rgb(59, 34, 95));
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+}
+
+.timeline-container ul li .circle {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(220, 0 ,240, 0.403);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;    
+}
+
+.timeline-container ul li .circle::after {
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    background-color: rgb(30, 17, 48);    
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-container ul li:nth-child(odd) .circle {
+    /* right: 30px; */
+    right: -31px;      
+    transform: translate(50%, -50%);
+}
+
+.timeline-container ul li:nth-child(even) .circle {
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-container ul li:nth-child(odd) .date {
+    right: 20px;
+}
+/* Timeline End */
 
 /* width */
 ::-webkit-scrollbar {
@@ -1114,6 +1242,45 @@ section {
         object-fit: contain;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .timeline-container {
+        width: 80%;
+        transform: translateX(15px);
+    }
+
+    .timeline-container::after {
+        left: -30px;
+    }
+
+    .timeline-container ul li {
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+
+    .timeline-container ul li:nth-child(odd) {
+        transform: translateX(0);   
+        text-align: left;     
+    }
+
+    .timeline-container ul li:nth-child(even) {
+        transform: translateX(0);   
+        text-align: left;     
+    }
+
+    .timeline-container ul li:nth-child(odd) .date {
+        left: 20px;    
+    }
+
+    .timeline-container ul li:nth-child(odd) .circle {
+        left: -30px;  
+        transform: translate(-50%, -50%);
+    }
+
+    .timeline-container ul li:nth-child(odd) {
+        transform: translateX(0);         
     }
 
 

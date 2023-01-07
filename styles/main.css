@@ -314,12 +314,6 @@ header {
     height: 10px;
 }
 
-section {
-    min-height: 100vh;
-    height: auto;
-    margin: 30px;
-}
-
 .home_content section .section_title {
     /* font-size: 3rem; */
     font-size: 2.5rem;
@@ -1144,6 +1138,12 @@ section {
         object-fit: contain;
     }
 
+    section {
+        min-height: 100vh;
+        height: auto;
+        margin: 30px;
+    }
+
 }
 
 /* pequena */
@@ -1263,8 +1263,8 @@ section {
     }
 
     ::-webkit-scrollbar {     
-        width: 5px;   
-        height: 5px;
+        width: 0px;   
+        height: 0px;
         background-color: #11101d;
     }
 
@@ -1358,6 +1358,96 @@ section {
 
     .timeline-container ul li:nth-child(odd) {
         transform: translateX(0);         
+    }
+
+    .texts h1 {    
+        font-size: 3rem;    
+    }
+    
+    .texts p {   
+        font-size: 1rem;    
+    }
+
+    section {
+        min-height: 100vh;
+        height: auto;
+        margin: 30px 10px;
+    }
+
+    #aboutme {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .image30 {
+        max-width: 90%;
+    }
+
+    .image45 {
+        max-width: 90%;
+    }
+
+    .image60 {
+        max-width: 90%;
+    }
+
+    .image80 {
+        max-width: 90%;
+    }
+
+    .image-card {
+        max-width: 90%;
+    }
+
+    .image-tcc {
+        max-width: 100%;
+        width: 100%;
+        object-fit: fill;
+        height: auto;
+    }
+
+    .right30 {
+        float: none;
+        width: 90%;        
+    }
+
+    .project-card.row {
+        flex-direction: column;
+    }
+
+    .project-card.row-reverse {
+        flex-direction: column;
+    }
+
+    .project-container {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .project-description-card {
+        gap: 0px;
+    }
+
+    .project-title {
+        margin-top: 1.2rem;
+    }
+
+    .project-link {
+        margin-bottom: 1.2rem;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 15px 30px;
+    }
+
+    .first-and-last-name-container {
+        flex-direction: column;
+    }
+
+    .input-container {
+        width: 100%;
     }
 
 

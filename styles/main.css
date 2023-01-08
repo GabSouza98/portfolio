@@ -21,6 +21,13 @@
     background: #e2e8f0;
 }
 
+#scholarity {
+    background: #e2e8f0;
+    margin: 0 !important;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .wrapper {
     height: 100vh;   
     overflow-y: auto;
@@ -50,7 +57,8 @@ header {
     min-width: 100vw;
     object-fit: cover;
     z-index: -1;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2) scaleX(1);
+    filter: contrast(200%);
 }
 
 .texts {
@@ -58,9 +66,13 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
     gap: 30px;
     color: white;
-    text-shadow: 0 0 50px black;
+    text-shadow: 0 0 50px black;    
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px -4px black;
 }
 
 .texts h1 {    
@@ -68,7 +80,8 @@ header {
 }
 
 .texts p {   
-    font-size: 1.5rem;    
+    font-size: 1.5rem;   
+    text-shadow: 0 0 50px black; 
 }
 
 .sidebar {
@@ -629,6 +642,10 @@ header {
     justify-content: center;
 }
 
+.column {
+    flex-direction: column;
+}
+
 /* Form Style */
 .form-container {    
     background-color: #11101d;
@@ -906,7 +923,7 @@ header {
 
 .timeline-container ul li .date {
     position: absolute;
-    top: -40px;
+    top: -2.8rem;
     width: 135px;
     height: 35px;   
     border-radius: 20px;
@@ -1133,6 +1150,7 @@ header {
     }    
 
     .left40 {
+        /* width: 25%; */
         max-width: 400px;
         float: left;   
         object-fit: contain;
@@ -1142,6 +1160,10 @@ header {
         min-height: 100vh;
         height: auto;
         margin: 30px;
+    }
+
+    #aboutme {
+        min-height: 80vh;
     }
 
 }
@@ -1448,6 +1470,15 @@ header {
 
     .input-container {
         width: 100%;
+    }
+
+    .wrapper {
+        height: calc(100vh - 78px);           
+    }
+
+    .background {
+        height: calc(100vh - 73px);
+        /* filter: none; */
     }
 
 

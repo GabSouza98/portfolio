@@ -58,7 +58,7 @@ header {
     object-fit: cover;
     z-index: -1;
     transform: translateZ(-1px) scale(2) scaleX(1);
-    filter: contrast(200%);
+    filter: contrast(140%);
 }
 
 .texts {

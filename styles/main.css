@@ -770,18 +770,23 @@ header {
 
 /* section5 */
 
+#projects {
+    margin: 30px 50px !important;
+}
+
 .project-container {    
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    /* background-color: #1d1b31; */
+    gap: 30px;    
 }
 
 .project-card {
     width: 100%;
     display: flex;
     border: 1px solid black;
+    border-radius: 7px;
+    /* background-color: white;     */
 }
 
 .row {
@@ -790,7 +795,7 @@ header {
 }
 
 .row-reverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse;    
 }
 
 .project-image-card {
@@ -804,7 +809,19 @@ header {
     width: 100%;
     min-height: 300px;
     height: 100%;
-    object-fit: fill;    
+    object-fit: fill;       
+}
+
+.row .project-image {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-right: 1px solid black;
+}
+
+.row-reverse .project-image {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 1px solid black;
 }
 
 .project-description-card {
@@ -814,12 +831,12 @@ header {
     align-items: center;
     justify-content: space-evenly;
     gap: 20px;    
-    /* background-color: #11101d; */
+    /* background-color: #b8bbbe; */
 }
 
 .project-title {
     font-size: 2.0rem;
-    /* border-bottom: 1px solid black; */
+    margin-top: 20px; 
 }
 
 .project-description {
@@ -829,7 +846,35 @@ header {
 }
 
 .project-link {
-    font-size: 1.0rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    width: auto;    
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    border-radius: 60px;
+    white-space: nowrap;
+    background-color: #11101d;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.project-link:hover {
+    /* background-color: whitesmoke; */
+    /* color: black; */
+    /* border: 1px solid black; */
+    transform: scale(1.15);
+}
+
+.project-link i {
+    font-size: 2rem;
+}
+
+.project-link span {
+    font-weight: 500;
 }
 
 /* Timeline Start */
@@ -971,6 +1016,21 @@ header {
     right: 20px;
 }
 /* Timeline End */
+
+.p5-link {
+    width: 30%;
+    border-radius: 6px;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.processing-link {
+    width: 30%;
+    border-radius: 6px;
+    margin-left: 35%;
+    margin-right: 35%;
+    background-color: whitesmoke;
+}
 
 /* width */
 ::-webkit-scrollbar {

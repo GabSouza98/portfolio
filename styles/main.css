@@ -1552,14 +1552,20 @@ header {
         flex-direction: column;
     }
 
-    .project-card.row-reverse {
-        flex-direction: column;
+    .row .project-image {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
     }
 
-    .project-container {
-        width: 95%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+    .row-reverse .project-image {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .project-card.row-reverse {
+        flex-direction: column;
     }
 
     .project-description-card {
@@ -1594,6 +1600,10 @@ header {
     .background {
         height: calc(100vh - 77px);
         /* filter: none; */
+    }
+
+    #projects {
+        margin: 30px !important;
     }
 
 

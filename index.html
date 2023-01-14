@@ -14,7 +14,9 @@
 
 <body>
 
-    <div class="sidebar active">
+    <div class="loader"></div>
+
+    <div class="sidebar active invisible">
 
         <div class="logo_content">
             <div class="logo">
@@ -68,33 +70,33 @@
 
                 <ul class="toggler-target">
                     <li class="inside-toggle">
-                        <a href="#lowcode">
-                            <i class='bx bx-desktop'></i>
-                            <span class="links_name">Low Code</span>
+                        <a href="#microservices">
+                            <i class='bx bxs-component'></i>
+                            <span class="links_name">Microservices</span>
                         </a>
-                        <span class="tooltip">Low Code</span>
-                    </li>
+                        <span class="tooltip">Microservices</span>
+                    </li>   
                     <li class="inside-toggle">
                         <a href="#nodered">
                             <i class='bx bx-git-compare'></i>
                             <span class="links_name">Automation</span>
                         </a>
                         <span class="tooltip">Automation</span>
-                    </li>
+                    </li>                   
+                    <li class="inside-toggle">
+                        <a href="#lowcode">
+                            <i class='bx bx-desktop'></i>
+                            <span class="links_name">Low Code</span>
+                        </a>
+                        <span class="tooltip">Low Code</span>
+                    </li>                                           
                     <li class="inside-toggle">
                         <a href="#python">
                             <i class='bx bx-images'></i>
                             <span class="links_name">Image Processing</span>
                         </a>
                         <span class="tooltip">Image Processing</span>
-                    </li>     
-                    <li class="inside-toggle">
-                        <a href="#microservices">
-                            <i class='bx bxs-component'></i>
-                            <span class="links_name">Microservices</span>
-                        </a>
-                        <span class="tooltip">Microservices</span>
-                    </li>                 
+                    </li>                                  
                 </ul>
             </li>            
 
@@ -136,7 +138,7 @@
     </div>
 
 
-    <div class="home_content">
+    <div class="home_content invisible">
         
             <div class="wrapper">                               
                 <header>
@@ -291,7 +293,7 @@
                         </div>
         
                         <div class="image-card" style="width: 200px !important;">             
-                            <img class="image" src="./assets/logos/spring2.png"  /> 
+                            <img class="iamage" src="./assets/logos/spring2.png"  /> 
                             <div class="image-overlay">
                                 <p class="image-description">Used as my main Java framework</p>
                             </div>
@@ -519,76 +521,61 @@
                     </div>
         
                 </section>
-        
-                <section id="lowcode">
+
+                <section id="microservices">
                     <div class="spacer"></div>
-                    <p class="section_title">Low Code with Power Apps and Power Bi</p>
-        
-                    <!-- <div class="image-text">       
-                        <img class="image30" src="./assets/lowcode/sensoryApp.jpg" />                                                         
-                        <p class="section_text text">During my internship, I develop an App using a Low-Code platform called Power Apps,
-                        maintained by Microsoft. The goal was to test a prothotype and see if people would like to use it.
-                        Since I worked at a soda factory, the App was designed to manage the tasting sections made for quality
-                        assurance of the product. </p>                                                                     
-                    </div> -->
+                    <p class="section_title">Microservices</p>
         
                     <div class="card-container">
-                        <img class="right30" src="./assets/lowcode/sensoryApp.jpg" /> 
-                        <p class="section_text">During my internship, I develop an App using a Low-Code platform Power Apps,
-                        maintained by Microsoft. The goal was to test a prothotype and see if people would like to use it.
-                        Since I worked at a soda factory, the App was designed to manage the tasting sections made for quality
-                        assurance of the product. The process consists of tasting some samples of the week's production,
-                        which were previously collected and arranged in a laboratory for trained and qualified employees to taste.
-                        Each employee gives a rating for each sample and makes observations about the strengths and weaknesses 
-                        of the samples. All notes were made on paper, and later transcribed to Excel. </p> 
-                        <br><br>  
-                    </div>
+                        <img class="right30" src="./assets/microservices/pix_logo2.png"  /> 
+                        <p class="section_text">
+                            Currently I work at a Bank, developing mainly backend solutions for Brazil's instant payment system, also
+                            kwown as Pix. Basically, transactions between different banks pass through the Central Bank, which regulates and defines
+                            the APIs that banks should use to make Pix transactions. 
+                        </p>
+                        <br>
+                    </div>                                  
         
                     <p class="section_text">
-                        The App focused on making this process more agile. First, the employee in charge of the laboratory 
-                        created a "tasting section", which represent the collection of samples to be analized at that session.
-                        Each section had it's own number of samples, and each sample had it's own information, such as bottle
-                        size, expiry date, temperature, brand, and batch number. After creating the section, the tasters were able
-                        to access it in their cellphones and avaliate each sample, giving a score, and giving notes about the
-                        intensity of flavors. Besides, the App had a little section to see the avalitions of the latest section,
-                        and another section to see the expected characteristics of each brand.
+                        First, the debtor participant sends a message to the Central Bank stating the desire to initiate a transaction. Then,
+                        the Central Bank sends a message to the creditor participant, informing about the payment request. If the receiving bank 
+                        accepts the payment, he answer with another message to Central Bank, which then notifies both the participants about
+                        the success of the transaction.
+                    </p>   
+        
+                    <div class="image-container">
+                        <img class="image80" src="./assets/microservices/pix_fluxo2.jpg"  />                                
+                    </div> 
+                    
+                    <p class="section_text">
+                        The project utilizes microservices architecture, dividing the components as Orchestrators (Integration microservices) and Atomic microservices.
+                        Orchestrators handle the integration and routing business logic, making the necessary calls to the atomic components, and 
+                        listening/posting to MQ queues. Atomics handle the database connection, saving and retrieving data, among other more
+                        specific tasks.
                     </p>
         
                     <div class="image-container">
-                        <img class="image30" src="./assets/lowcode/sensoryApp2.jpg"  /> 
-                        <img class="image30" src="./assets/lowcode/sensoryApp3.jpg"  /> 
-                        <img class="image30" src="./assets/lowcode/sensoryApp4.jpg"  /> 
+                        <img class="image80" src="./assets/microservices/microservices3.png"  />                                
                     </div>
-        
+                    
                     <p class="section_text">
-                        After all the tasters had tasted and avaliated their samples, the data was sent to a Sharepoint List, 
-                        which was used to storage all data. We also created an integration between Sharepoint and a Power Bi Dashboard. 
-                        The metrics calculated by the dashbaord were used in meetings and discusions about improvement points for the
-                        product, mainly focusing in understanding what causes the lowest scores. We could filter by date, flavors, 
-                        worst ratings, and others.                                
-                    </p>                      
+                        Every component is implemented following the Hexagonal (Ports and Adapters) pattern, which focus on segregating as much as 
+                        possible the Application layer from the Domain (business logic) layer. The main goal is to prevent coupling and dependency 
+                        between services, providing an easy way to connected to their software environment by means of ports and adapters. For instance, if 
+                        it were necessary to change the DBMS, this could be done by making changes only to the adapter layer, without changing the other layers.
+                    </p>
         
                     <div class="image-container">
-                        <img class="image45" src="./assets/lowcode/sensoryApp10.jpg"  /> 
-                        <img class="image45" src="./assets/lowcode/sensoryApp12.jpg"  /> 
-                    </div>                                         
+                        <img class="image80" src="./assets/microservices/hexagonal.png"  />                                
+                    </div> 
         
-                    <p class="section_text">
-                        The App was develop in about 2 weeks, and the first adjustments were made very quickly. I partnered up with the
-                        laboratory responsible, who knew the business and taught me, and I proposed to him how the App could be
-                        develop. It was a great experience, because I could see the difference that it made in the laboratory routine,
-                        and I enjoyed transcribing the business logic into a new solution. The project was awarded as one of the best 
-                        internship projects among Latin America factories, and later the development of an official, more scalable 
-                        and robust solution was started.                              
-                    </p>        
-                </section>
-        
+                </section>   
+
                 <section id="nodered">
                     <div class="spacer"></div>
                     <p class="section_title">Automation with NodeRed</p>
         
-                    <!-- <img class="right30" src="./assets/nodered/dashboard3.jpg" /> -->
-                    <p class="section_text">Also during the internship at the soda factory, I started to learn about process
+                    <p class="section_text">During my internship at a soda factory, I started to learn about process
                         Automation and control. The factory had a lot of equipments which weren't connected to any external network, only 
                         the OT network, so the data acquired was not storaged. From that, the Automation team began to study 
                         ways to access and store data aiming to improve the process control management. We utilized NodeRed, which is a 
@@ -656,6 +643,61 @@
                         <img class="image30" src="./assets/nodered/dashboard3.jpg"  />                              
                     </div> 
         
+                </section>
+        
+                <section id="lowcode">
+                    <div class="spacer"></div>
+                    <p class="section_title">Low Code with Power Apps and Power Bi</p>
+
+                    <div class="card-container">
+                        <img class="right30" src="./assets/lowcode/sensoryApp.jpg" /> 
+                        <p class="section_text">Also during my internship, I develop an App using the Low-Code platform Power Apps,
+                        maintained by Microsoft. The goal was to test a prothotype and see if people would like to use it.
+                        Since I worked at a soda factory, the App was designed to manage the tasting sections made for quality
+                        assurance of the product. The process consists of tasting some samples of the week's production,
+                        which were previously collected and arranged in a laboratory for trained and qualified employees to taste.
+                        Each employee gives a rating for each sample and makes observations about the strengths and weaknesses 
+                        of the samples. All notes were made on paper, and later transcribed to Excel. </p> 
+                        <br><br>  
+                    </div>
+        
+                    <p class="section_text">
+                        The App focused on making this process more agile. First, the employee in charge of the laboratory 
+                        created a "tasting section", which represent the collection of samples to be analized at that session.
+                        Each section had it's own number of samples, and each sample had it's own information, such as bottle
+                        size, expiry date, temperature, brand, and batch number. After creating the section, the tasters were able
+                        to access it in their cellphones and avaliate each sample, giving a score, and giving notes about the
+                        intensity of flavors. Besides, the App had a little section to see the avalitions of the latest section,
+                        and another section to see the expected characteristics of each brand.
+                    </p>
+        
+                    <div class="image-container">
+                        <img class="image30" src="./assets/lowcode/sensoryApp2.jpg"  /> 
+                        <img class="image30" src="./assets/lowcode/sensoryApp3.jpg"  /> 
+                        <img class="image30" src="./assets/lowcode/sensoryApp4.jpg"  /> 
+                    </div>
+        
+                    <p class="section_text">
+                        After all the tasters had tasted and avaliated their samples, the data was sent to a Sharepoint List, 
+                        which was used to storage all data. We also created an integration between Sharepoint and a Power Bi Dashboard. 
+                        The metrics calculated by the dashbaord were used in meetings and discusions about improvement points for the
+                        product, mainly focusing in understanding what causes the lowest scores. We could filter by date, flavors, 
+                        worst ratings, and others.                                
+                    </p>                      
+        
+                    <div class="image-container">
+                        <img class="image45" src="./assets/lowcode/sensoryApp10.jpg"  /> 
+                        <img class="image45" src="./assets/lowcode/sensoryApp12.jpg"  /> 
+                    </div>                                         
+        
+                    <p class="section_text">
+                        The App was develop in about 2 weeks, and the first adjustments were made very quickly. I partnered up with the
+                        laboratory responsible, who knew the business and taught me, and I proposed to him how the App could be
+                        develop. It was a great experience, because I could see the difference that it made in the laboratory routine,
+                        and I enjoyed transcribing the business logic into a new solution. The project was awarded as one of the best 
+                        internship projects among Latin America factories, and later the development of an official, more scalable 
+                        and robust solution was started.                              
+                    </p>        
                 </section>
         
                 <section id="python">
@@ -758,55 +800,6 @@
                     </p>         
         
                 </section>      
-                
-                <section id="microservices">
-                    <div class="spacer"></div>
-                    <p class="section_title">Microservices</p>
-        
-                    <div class="card-container">
-                        <img class="right30" src="./assets/microservices/pix_logo2.png"  /> 
-                        <p class="section_text">
-                            Currently I work at a Bank, developing mainly backend solutions for Brazil's instant payment system, also
-                            kwown as Pix. Basically, transactions between different banks pass through the Central Bank, which regulates and defines
-                            the APIs that banks should use to make Pix transactions. 
-                        </p>
-                        <br>
-                    </div>                                  
-        
-                    <p class="section_text">
-                        First, the debtor participant sends a message to the Central Bank stating the desire to initiate a transaction. Then,
-                        the Central Bank sends a message to the creditor participant, informing about the payment request. If the receiving bank 
-                        accepts the payment, he answer with another message to Central Bank, which then notifies both the participants about
-                        the success of the transaction.
-                    </p>   
-        
-                    <div class="image-container">
-                        <img class="image80" src="./assets/microservices/pix_fluxo2.jpg"  />                                
-                    </div> 
-                    
-                    <p class="section_text">
-                        The project utilizes microservices architecture, dividing the components as Orchestrators (Integration microservices) and Atomic microservices.
-                        Orchestrators handle the integration and routing business logic, making the necessary calls to the atomic components, and 
-                        listening/posting to MQ queues. Atomics handle the database connection, saving and retrieving data, among other more
-                        specific tasks.
-                    </p>
-        
-                    <div class="image-container">
-                        <img class="image80" src="./assets/microservices/microservices3.png"  />                                
-                    </div>
-                    
-                    <p class="section_text">
-                        Every component is implemented following the Hexagonal (Ports and Adapters) pattern, which focus on segregating as much as 
-                        possible the Application layer from the Domain (business logic) layer. The main goal is to prevent coupling and dependency 
-                        between services, providing an easy way to connected to their software environment by means of ports and adapters. For instance, if 
-                        it were necessary to change the DBMS, this could be done by making changes only to the adapter layer, without changing the other layers.
-                    </p>
-        
-                    <div class="image-container">
-                        <img class="image80" src="./assets/microservices/hexagonal.png"  />                                
-                    </div> 
-        
-                </section>    
         
                 <section id="projects">  
                     <div class="spacer"></div>          
@@ -1084,8 +1077,26 @@
                             </div>
                         </div>
                     </form>
+
+                    <iframe id="player" type="text/html" width="640" height="360"
+                    src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                    frameborder="0"></iframe>
+
+                    <iframe id="player" type="text/html" width="640" height="360"
+                    src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                    frameborder="0"></iframe>
+
+                    <iframe id="player" type="text/html" width="640" height="360"
+                    src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                    frameborder="0"></iframe>
+
+                    <iframe id="player" type="text/html" width="640" height="360"
+                    src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                    frameborder="0"></iframe>
                     
-                </section>               
+                </section>    
+                
+                
 
             </div>                     
        
@@ -1097,10 +1108,14 @@
         </section> -->
     </div>
 
+    
+
 
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
+        let homeContent = document.querySelector(".home_content");
+        let loader = document.querySelector(".loader");
 
         let searchBtn = document.querySelector(".bx-search");
 
@@ -1109,6 +1124,16 @@
         const togglerTarget = document.querySelector(".toggler-target");       
         const extendable = document.querySelector(".extendable");
         const overlay = document.querySelectorAll(".image-overlay");
+
+        window.addEventListener("load", () => {            
+            sidebar.classList.remove("invisible");
+            homeContent.classList.remove("invisible");
+
+            loader.classList.add("loader--hidden");           
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
 
         //controls sidebar
         btn.onclick = function () {

@@ -10,6 +10,44 @@
     scroll-behavior: smooth;
 }
 
+.invisible {
+    opacity: 0;
+}
+
+.loader {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #11101d;
+    transition: opacity 1s;
+    
+}
+
+.loader::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 15px solid #e2e8f0;
+    border-top-color: #11101d;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn);}
+    to   { transform: rotate(1turn);}
+}
+
+.loader--hidden {
+    opacity: 0;
+}
+
 #welcome {
     margin: 0 !important;   
 }
@@ -69,7 +107,7 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     /* box-shadow: 0px 0px 30px -4px black;   */
-    box-shadow: 0px 0px 6px -0px white;  
+    box-shadow: 0px 0px 3px -0px white;  
 }
 
 .scroll-down {        
@@ -90,7 +128,7 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     /* box-shadow: 0px 0px 30px -4px black;  */
-    box-shadow: 0px 0px 8px -0px white;   
+    box-shadow: 0px 0px 4px -0px white;   
 }
 
 .texts h1 {    

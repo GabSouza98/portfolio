@@ -1592,7 +1592,7 @@ header {
     }
 
     .background {
-        height: calc(100vh - 73px);
+        height: calc(100vh - 77px);
         /* filter: none; */
     }
 

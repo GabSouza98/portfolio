@@ -1610,5 +1610,10 @@ header {
         bottom: 100px;
     }
 
+    .texts {
+        top: 20%;
+        position: absolute;
+    }
+
 
 }

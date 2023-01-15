@@ -101,7 +101,7 @@ header {
 
 .scroll-container {
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     padding: 10px 5px;
     height: 10%;
     background-color: rgba(0, 0, 0, 0.4);

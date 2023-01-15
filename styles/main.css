@@ -101,7 +101,7 @@ header {
 
 .scroll-container {
     position: absolute;
-    bottom: 70px;
+    bottom: 60px;
     padding: 10px 5px;
     height: 10%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -1604,6 +1604,10 @@ header {
 
     #projects {
         margin: 30px !important;
+    }
+
+    .scroll-container {
+        bottom: 100px;
     }
 
 

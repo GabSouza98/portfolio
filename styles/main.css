@@ -1111,16 +1111,15 @@ section {
     max-height: 85vh;
     overflow-y: hidden;
     margin-bottom: 30px;
-    transition: max-height 3s linear;
+    transition: max-height 1.5s linear; 
 }
 
 .read-more.activeHeight {
-    height: auto;    
+    height: auto;      
 }
 
 .read-more.activeMaxHeight {
-    max-height: 700vh;
-    height: auto; 
+    max-height: 600vh;
 }
 
 .read-more-btn {

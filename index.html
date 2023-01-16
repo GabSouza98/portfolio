@@ -1139,9 +1139,9 @@
 
                 //se desconsiderar esse IF, a animação funcionará para expandir mas não para voltar.
                 //neste caso, colocar o height:auto na mesma classe do max-height.
-                // if(!readMoreContainer.classList.contains("activeHeight")) {
-                //     readMoreContainer.classList.add("activeHeight");
-                // }            
+                if(!readMoreContainer.classList.contains("activeHeight")) {
+                    readMoreContainer.classList.add("activeHeight");
+                }            
 
                 if(this.textContent.includes("More")) {
                     this.textContent = this.textContent.replace("More", "Less");

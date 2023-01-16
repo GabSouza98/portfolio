@@ -1097,12 +1097,7 @@ header {
     background-color: whitesmoke;
 }
 
-section {
-    height: auto;
-    max-height: 10000px;
-    transition: max-heigth 2s ease;
-}
-
+/* READ MORE LOGIC START */
 .read-more {
     position: relative;
     display: block;
@@ -1110,8 +1105,7 @@ section {
     height: 85vh;
     max-height: 85vh;
     overflow-y: hidden;
-    margin-bottom: 30px;
-    transition: max-height 1.5s linear; 
+    transition: max-height 2s linear; 
 }
 
 .read-more.activeHeight {
@@ -1140,11 +1134,24 @@ section {
 
 .read-more-btn:hover {
     cursor: pointer;
-    /* transform: scale(1.2); */
     background-color: #e2e8f0;
     color: #11101d;
     border: 1px solid #11101d;
 }
+
+/* :is(hr.solid):has(+ button.read-more-btn:hover) {
+    margin: 15px 0%;
+    width: 100%;
+} */
+
+hr.solid {
+    border-top: 1px solid #1d1b31;
+    border-radius: 10px;
+    margin: 15px 15%;
+    width: 70%;
+    transition: all 0.5s linear;
+}
+/* READ MORE LOGIC END */
 
 /* width */
 ::-webkit-scrollbar {

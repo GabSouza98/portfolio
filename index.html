@@ -1103,7 +1103,7 @@
                                     </div>
                                 </div>
                                 <input type="hidden" name="_next" value="http://gsouza.dev.br">
-                                <input type="hidden" name="_subject" value="New submission!">
+                                <input type="hidden" name="_subject" value="New submission!">                              
                                 <div class="submit-btn-container">                        
                                         <button type="submit">Send</button>                                   
                                 </div>
@@ -1141,16 +1141,16 @@
                 readMoreContainer.classList.toggle("activeMaxHeight");
 
                 //se desconsiderar esse IF, a animação funcionará para expandir mas não para voltar.
-                //neste caso, colocar o height:auto na mesma classe do max-height.
-                if(!readMoreContainer.classList.contains("activeHeight")) {
-                    readMoreContainer.classList.add("activeHeight");
-                }            
+                //neste caso, colocar o height:auto na mesma classe do activeMaxHeight.
+                //se quiser usar este IF, deixar o heigth:auto na classe activeHeight e tirar da activeMaxHeight
+                // if(!readMoreContainer.classList.contains("activeHeight")) {
+                //     readMoreContainer.classList.add("activeHeight");
+                // }            
 
-                if(this.textContent.includes("More")) {
-                    this.textContent = this.textContent.replace("More", "Less");
-                } else {
-                    this.textContent = this.textContent.replace("Less", "More");
-                }
+                this.textContent = this.textContent.includes("Read More...") ? "Read Less..." : "Read More...";
+
+                //para fazer o botao sumir depois de abrir
+                // this.classList.add("none");
             };
         }
 

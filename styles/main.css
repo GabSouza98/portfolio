@@ -656,8 +656,9 @@ header {
     width: 350px;
     object-fit: contain;
     border-radius: 50%;
-    shape-outside: circle(50%);
-    border: 1px solid var(--black);  
+    shape-outside: circle(50%);  
+    border: none;
+    box-shadow: 0px 0px 10px 1px var(--darkest); 
 }
 
 .image-card {
@@ -1241,6 +1242,43 @@ hr.solid {
     border-radius: 10px;
 }
 
+.about-me-btn-container {  
+    height: auto;
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.about-me-btn-container button {
+    margin: 0 20px;
+    padding: 20px;    
+    border-radius: 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--dark);
+    border: 1px solid var(--dark);
+    transition: all 0.5s ease;    
+    font-weight: 500;
+}
+
+.about-me-btn-container button:hover {
+    cursor: pointer;
+    background-color: var(--neon);
+    border: 1px solid var(--neon);
+    box-shadow: 0px 0px 20px 1px var(--neon); 
+    color: var(--darkest);
+}
+
+.about-me-btn-container button:focus {
+    outline: none;    
+}
+
+.about-me-btn-container button i {
+    margin: 5px;
+}
+
+
 /* grande */
 @media only screen and (min-width: 600px) {
 
@@ -1309,12 +1347,11 @@ hr.solid {
         width: 220px;
         margin: auto;   
         color: var(--white);     
-        border-top: 1px solid var(--white);
-        /* border-bottom: 1px solid var(--white); */    
+        border-top: 1px solid var(--white);        
     }
     
     .sidebar.active .profile_content .social-media a {
-        color: white;
+        color: var(--white);
     }
     
     .sidebar.active .profile_content .social-media i {
@@ -1325,12 +1362,47 @@ hr.solid {
     
     .sidebar.active .profile_content .social-media i:hover {      
         margin: 0 10px;
-        color: var(--neon);
+        /* color: var(--neon); */
     }
 
     .sidebar .profile_content .social-media {
         display: none;
     }
+
+    #aboutme .social-media {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        height: 3.5rem;
+        width: 50%;
+        margin: 20px auto;          
+        color: var(--dark);     
+        border-top: 1px solid var(--dark);       
+        transition: all 0.5 ease;
+    }
+    
+    #aboutme .social-media a {
+        color: var(--dark);
+    }
+    
+    #aboutme .social-media i {
+        font-size: 2.5rem;   
+        margin: 5px;
+        transition: all 0.5s ease; 
+    }
+
+    /* #aboutme .social-media:has(i:hover) {
+        border-top: 1px solid var(--neon);        
+    } */
+    
+    #aboutme .social-media i:hover {      
+        margin: 0 15px;        
+        color: var(--neon);        
+    }
+    
+
+
 
     .sidebar.active .profile_content .profile {
         background: var(--dark);
@@ -1651,7 +1723,8 @@ hr.solid {
         object-fit: contain;
         border-radius: 50%;
         shape-outside: circle(50%);
-        border: 1px solid var(--black); 
+        border: none;
+        box-shadow: 0px 0px 10px 1px var(--darkest);
     }
 
     .left40 {

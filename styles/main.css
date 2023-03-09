@@ -783,8 +783,7 @@ header {
 
 /* Form Style */
 .form-container {    
-    background-color: var(--darkest);
-    opacity: 0.9;
+    background-color: var(--darkest);    
     width: 90%;
     height: auto;   
     border-radius: 10px;
@@ -886,7 +885,7 @@ header {
     width: 40%;
     height: 50px;
     color: var(--light);
-    background-color: var(--dark);    
+    background-color: var(--dark);
     font-size: 1.2em;
     border-radius: 10px;
     border: 1px solid var(--neon);

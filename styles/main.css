@@ -489,7 +489,11 @@ header {
     display: flex;
     flex-direction: row;    
     flex-wrap: wrap;    
-    justify-content: space-evenly;
+    justify-content: space-evenly;   
+}
+
+.animations-container:nth-child(2) {
+    transition-delay: 2s;
 }
 
 .animation-card {
@@ -1318,28 +1322,68 @@ hr.solid {
 
 .hidden {
     opacity: 0;
-    filter: blur(5px);    
+    filter: blur(3px);   
     transition: all 1s;
+}
+
+.hidden-title {
+    opacity: 0;
+    filter: blur(6px);   
+    transform: translateY(-100px);
+    transition: all 2s;
+}
+
+.hidden-card {
+    opacity: 0;
+    filter: blur(3px);    
+    transform: scale(0.7);
+    transition: all 0.8s;
 }
 
 .hidden-left {
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-30%);
-    transition: all 2s;
+    filter: blur(3px);
+    transform: translateX(-50%);
+    transition: all 1s;
 }
 
 .hidden-right {
     opacity: 0;
+    filter: blur(3px);
+    transform: translateX(+50%);
+    transition: all 1s;
+}
+
+.hidden-timeline-left {
+    opacity: 0;
     filter: blur(5px);
-    transform: translateX(+30%);
+    transform: translateX(-50%) scale(0.1);
+    transition: all 2s;
+}
+
+.hidden-timeline-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(+50%) scale(0.1);
     transition: all 2s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
+}
+
+.show-timeline-left {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(-30px) scale(1);
+}
+
+.show-timeline-right {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(+30px) scale(1);
 }
 
 @media(prefers-reduced-motion) {

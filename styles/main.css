@@ -1049,12 +1049,12 @@ header {
     transition: all 0.5s ease;
 }
 
-.timeline-container ul li:hover {
+.timeline-container ul li:hover {   
     box-shadow: 1px 1px 15px var(--neon);
 } 
 
 .timeline-container ul li:hover .circle {
-    box-shadow: 1px 1px 50px var(--neon);   
+    box-shadow: 1px 1px 50px var(--neon);       
 }
 
 .timeline-container ul li:hover .circle::after {
@@ -1064,14 +1064,14 @@ header {
 .timeline-container ul li:nth-child(odd) {
     float: left;
     clear: right;
-    transform: translateX(-30px);
+    /* transform: translateX(-30px); */
     text-align: right;
 }
 
 .timeline-container ul li:nth-child(even) {
     float: right;
     clear: left;
-    transform: translateX(30px);
+    /* transform: translateX(30px); */
 }
 
 .timeline-container ul li:last-child {
@@ -1135,7 +1135,7 @@ header {
 }
 
 .timeline-container ul li:nth-child(odd) .circle {
-    /* right: 30px; */
+    /* right: 30px;  */
     right: -31px;      
     transform: translate(50%, -50%);
 }
@@ -1314,6 +1314,64 @@ hr.solid {
 #aboutme .social-media i:hover {      
     margin: 0 15px;        
     color: var(--neon);        
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);    
+    transition: all 1s;
+}
+
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-30%);
+    transition: all 2s;
+}
+
+.hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(+30%);
+    transition: all 2s;
+}
+
+.hidden-timeline-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+
+.hidden-timeline-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(+50%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.show-timeline-left {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(-30px);
+}
+
+.show-timeline-right {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(+30px);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
 }
 
 

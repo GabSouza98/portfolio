@@ -1064,14 +1064,14 @@ header {
 .timeline-container ul li:nth-child(odd) {
     float: left;
     clear: right;
-    /* transform: translateX(-30px); */
+    transform: translateX(-30px);
     text-align: right;
 }
 
 .timeline-container ul li:nth-child(even) {
     float: right;
     clear: left;
-    /* transform: translateX(30px); */
+    transform: translateX(30px);
 }
 
 .timeline-container ul li:last-child {
@@ -1336,36 +1336,10 @@ hr.solid {
     transition: all 2s;
 }
 
-.hidden-timeline-left {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-50%);
-    transition: all 2s;
-}
-
-.hidden-timeline-right {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(+50%);
-    transition: all 2s;
-}
-
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-}
-
-.show-timeline-left {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(-30px);
-}
-
-.show-timeline-right {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(+30px);
 }
 
 @media(prefers-reduced-motion) {

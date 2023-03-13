@@ -241,7 +241,7 @@
         
                     <div class="timeline-container">
                         <ul>                         
-                            <li class="hidden">
+                            <li class="hidden-timeline-left">
                                 <h3 class="title">Backend Developer</h3>
                                 <p>Working currently at CWI Software, developing solutions for utilization of Brazil's instant payment 
                                 system, Pix. The project has hundreds of microservices and coworkers and utilizes mainly Spring Boot</p>
@@ -249,7 +249,7 @@
                                 <span class="circle"></span>
                                 <span class="date">January, 2022</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-right">
                                 <h3 class="title">Analysis and Systems Development</h3>
                                 <p>
                                     Concluded my Chemical Engeneering graduation and started a new Technologist course 
@@ -258,7 +258,7 @@
                                 <span class="circle"></span>
                                 <span class="date">December, 2021</span>                    
                             </li>                            
-                            <li class="hidden">
+                            <li class="hidden-timeline-left">
                                 <h3 class="title">Intern at Ambev</h3>
                                 <p>Internship at the biggest beverage industry in Latin America. I learned about production process of soda, 
                                     process management and control, leadership and team management, and later I develop a few tech solutions 
@@ -267,7 +267,7 @@
                                 <span class="circle"></span>
                                 <span class="date">January, 2020</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-right">
                                 <h3 class="title">Intern at Fepam</h3>
                                 <p>Internship at a State Body responsible for the environmental licensing of enterprises. 
                                     I learned about the laws concerning the rules for factories to operate, and carried out analysis of documents 
@@ -284,7 +284,7 @@
                                 <span class="circle"></span>
                                 <span class="date">October, 2018</span>                    
                             </li> -->
-                            <li class="hidden">
+                            <li class="hidden-timeline-left">
                                 <h3 class="title">Scientific Initiation at Fepam</h3>
                                 <p>
                                     Development of research on the impact of sewage discharge on the water quality of the Gravataí River (Brazil).
@@ -292,7 +292,7 @@
                                 <span class="circle"></span>
                                 <span class="date">August, 2018</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-right">
                                 <h3 class="title">Private Lessons Teacher</h3>
                                 <p>
                                    I gave lessons for elementary school students, gathering exercises and solving 
@@ -301,7 +301,7 @@
                                 <span class="circle"></span>
                                 <span class="date">April, 2018</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-left">
                                 <h3 class="title">Scientific Initiation at UFRGS's Theoretical Chemistry Lab</h3>
                                 <p>
                                     I performed Molecular Docking simulations using softwares such as AutoDock, comparing results obtained for 
@@ -310,7 +310,7 @@
                                 <span class="circle"></span>
                                 <span class="date">March, 2017</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-right">
                                 <h3 class="title">Chemical Engineering</h3>
                                 <p>
                                     I started a bachelor's degree in Chemical Engineering at UFRGS (Federal University of Rio Grande do Sul).
@@ -318,7 +318,7 @@
                                 <span class="circle"></span>
                                 <span class="date">January, 2016</span>                    
                             </li>
-                            <li class="hidden">
+                            <li class="hidden-timeline-left">
                                 <h3 class="title">High School</h3>
                                 <p>                                   
                                     I completed high school at Sinodal.
@@ -1261,11 +1261,11 @@
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
                     entry.target.classList.add('show');
-                    // observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 } 
-                else {
-                    entry.target.classList.remove('show');
-                }
+                // else {
+                //     entry.target.classList.remove('show');
+                // }
             })
         }    
         );
@@ -1278,11 +1278,11 @@
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
                     entry.target.classList.add('show-timeline-left');
-                    // observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 } 
-                else {
-                    entry.target.classList.remove('show-timeline-left');
-                }
+                // else {
+                //     entry.target.classList.remove('show-timeline-left');
+                // }
             })
         }    
         );
@@ -1296,11 +1296,11 @@
             entries.forEach((entry) => {
                 if(entry.isIntersecting) {
                     entry.target.classList.add('show-timeline-right');
-                    // observer.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 } 
-                else {
-                    entry.target.classList.remove('show-timeline-right');
-                }
+                // else {
+                //     entry.target.classList.remove('show-timeline-right');
+                // }
             })
         }    
         );

@@ -1068,14 +1068,14 @@ header {
 .timeline-container ul li:nth-child(odd) {
     float: left;
     clear: right;
-    transform: translateX(-30px);
+    /* transform: translateX(-30px); */
     text-align: right;
 }
 
 .timeline-container ul li:nth-child(even) {
     float: right;
     clear: left;
-    transform: translateX(30px);
+    /* transform: translateX(30px); */
 }
 
 .timeline-container ul li:last-child {

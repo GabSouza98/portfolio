@@ -924,7 +924,7 @@
                                 <p class="project-description">An implementation of the Wordle game, but with an extra feature: the 'Get Tips' button.
                                     Based on the word attempts made, the API suggests what words are possible answers according to the wrong/right letters. There's also
                                     a "Statistics" page to see how many games you played, and a graph of your victories by attempts. Made with Spring, OpenAPI, 
-                                    SQL Server, JDBI, and Angular.
+                                    PostgreSQL, JDBI, and Angular. Uses Docker to generate images and has a docker-compose file to manage all the containers.
                                 </p>
                                 <a class="project-link" href="https://github.com/GabSouza98/wordle"  >
                                     <i class='bx bxl-github'></i>
@@ -1202,6 +1202,9 @@
         let homeContent = document.querySelector(".home_content");
         let loader = document.querySelector(".loader");
 
+        //calculated vh
+        let vh = window.innerHeight * 0.01;
+
         const readMoreBtns = document.querySelectorAll(".read-more-btn");    
 
         for(var i=0; i<readMoreBtns.length; i++) {
@@ -1210,14 +1213,29 @@
                 //seleciona a div "read-more" relativa a esse botao "read-more-btn"
                 var readMoreContainer = this.parentNode.parentNode.firstElementChild;
 
+                //seleciona o id da <section> relativa a esse botao "read-more-btn"
+                var sectionContainerId = this.parentNode.parentNode.id;
+                
+
                 readMoreContainer.classList.toggle("activeMaxHeight");
 
-                //se desconsiderar esse IF, a animação funcionará para expandir mas não para voltar.
-                //neste caso, colocar o height:auto na mesma classe do activeMaxHeight.
-                //se quiser usar este IF, deixar o heigth:auto na classe activeHeight e tirar da activeMaxHeight
-                // if(!readMoreContainer.classList.contains("activeHeight")) {
-                //     readMoreContainer.classList.add("activeHeight");
-                // }            
+                // se desconsiderar esse IF, a animação funcionará para expandir mas não para voltar.
+                // neste caso, colocar o height:auto na mesma classe do activeMaxHeight.
+                // se quiser usar este IF, deixar o heigth:auto na classe activeHeight e tirar da activeMaxHeight
+                if(!readMoreContainer.classList.contains("activeHeight")) {
+                    readMoreContainer.classList.add("activeHeight");
+                }
+
+
+                if(this.textContent.includes("Read Less...")) {               
+                    console.log('Scrolling to ' + sectionContainerId);     
+                    var obj = document.getElementById(sectionContainerId);
+                    obj.scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth"});
+
+                    //funciona
+                    // var wrapper = document.querySelector('.wrapper');
+                    // wrapper.scrollBy(0, -3000);                    
+                }
 
                 this.textContent = this.textContent.includes("Read More...") ? "Read Less..." : "Read More...";
 
@@ -1326,6 +1344,16 @@
         );
         const hiddenTimelineRight = document.querySelectorAll('.hidden-timeline-right');
         hiddenTimelineRight.forEach((el) => observerTimelineRight.observe(el));
+                     
+        function Position(obj){
+            var currenttop = 0;
+            if (obj.offsetParent){
+                do{
+                    currenttop += obj.offsetTop;
+                }while ((obj = obj.offsetParent));
+            return [currenttop];
+            }
+        }
 
 
     </script>
